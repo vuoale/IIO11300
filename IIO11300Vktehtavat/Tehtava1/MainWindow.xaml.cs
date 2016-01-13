@@ -33,11 +33,14 @@ namespace Tehtava1
 
         private void btnCalculate_Click(object sender, RoutedEventArgs e)
         {
-            //TODO
+            double ikkunaLeveys = Convert.ToDouble(txtIkkunaLeveys.Text);
+            double ikkunaKorkeus = Convert.ToDouble(txtIkkunaKorkeus.Text);
+            double karmiLeveys = Convert.ToDouble(txtKarmiLeveys.Text);
+            double result = 0;
+
             try
             {
-                double result;
-                result = BusinessLogicWindow.CalculatePerimeter(1, 1);
+                result = BusinessLogicWindow.CalculatePerimeter(ikkunaLeveys, ikkunaKorkeus);
             }
             catch (Exception ex)
             {
@@ -45,13 +48,15 @@ namespace Tehtava1
             }
             finally
             {
-                //yield to an user that everything okay
+                txtIkkunaPA.Text = Convert.ToString(result);
+                txtKarmiPiiri.Text = Convert.ToString(ikkunaLeveys + ikkunaLeveys + ikkunaKorkeus + ikkunaKorkeus);
+                txtKarmiPA.Text = Convert.ToString(ikkunaLeveys * karmiLeveys * 2 + (ikkunaKorkeus-karmiLeveys*2) * karmiLeveys * 2);
             }
         }
 
     private void btnClose_Click(object sender, RoutedEventArgs e)
     {
-
+            this.Close();
     }
   }
 
@@ -60,9 +65,9 @@ namespace Tehtava1
     /// <summary>
     /// CalculatePerimeter calculates the perimeter of a window
     /// </summary>
-    public static double CalculatePerimeter(double widht, double height)
+    public static double CalculatePerimeter(double ikkunaLeveys, double ikkunaKorkeus)
         {
-            throw new System.NotImplementedException();
+            return ikkunaLeveys * ikkunaKorkeus;
         }
     }
 }
