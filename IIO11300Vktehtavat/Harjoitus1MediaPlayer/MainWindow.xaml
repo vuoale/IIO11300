@@ -5,10 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Harjoitus1MediaPlayer"
         mc:Ignorable="d"
-        Title="My Fine MediaPlayer" Height="350" Width="525">
+        Title="My Fine MediaPlayer" Height="358.81" Width="424.885">
     <Grid>
-        <Button x:Name="btnPlay" Content="Play" HorizontalAlignment="Left" Margin="19,79,0,0" VerticalAlignment="Top" Width="75" Click="btnPlay_Click"/>
-        <MediaElement x:Name="mediaElement" HorizontalAlignment="Left" Height="178" Margin="19,120,0,0" VerticalAlignment="Top" Width="471" LoadedBehavior="Manual"/>
+        <Button x:Name="btnPlay" Content="Play" HorizontalAlignment="Left" Margin="32,20,0,0" VerticalAlignment="Top" Width="75" Click="btnPlay_Click"/>
+        <MediaElement x:Name="mediaElement" HorizontalAlignment="Left" Height="255" Margin="32,53,0,0" VerticalAlignment="Top" Width="340" LoadedBehavior="Manual"/>
+        <Button x:Name="btnPause" Content="Pause" HorizontalAlignment="Left" Margin="121,20,0,0" VerticalAlignment="Top" Width="75" Click="btnPause_Click"/>
+        <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" Margin="211,20,0,0" VerticalAlignment="Top" Width="75" Click="btnStop_Click"/>
 
     </Grid>
 </Window>
