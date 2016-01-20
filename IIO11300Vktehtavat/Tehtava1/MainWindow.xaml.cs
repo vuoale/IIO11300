@@ -33,6 +33,25 @@ namespace Tehtava1
 
         private void btnCalculate_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                //lasketaan pinta-ala Ikkuna-olion avulla
+                //luodaan luokasta olio
+                JAMK.IT.IIO11300.Ikkuna ikk = new JAMK.IT.IIO11300.Ikkuna();
+                ikk.Korkeus = double.Parse(txtIkkunaKorkeus.Text);
+                ikk.Leveys = double.Parse(txtIkkunaLeveys.Text);
+                //tulos käyttäjälle
+                //VE metodilla
+                //MessageBox.Show(ikk.LaskePintaAla().ToString());
+                //VE property
+                MessageBox.Show(ikk.PintaAla.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            /*
             double ikkunaLeveys = Convert.ToDouble(txtIkkunaLeveys.Text);
             double ikkunaKorkeus = Convert.ToDouble(txtIkkunaKorkeus.Text);
             double karmiLeveys = Convert.ToDouble(txtKarmiLeveys.Text);
@@ -52,12 +71,14 @@ namespace Tehtava1
                 txtKarmiPiiri.Text = Convert.ToString(ikkunaLeveys + ikkunaLeveys + ikkunaKorkeus + ikkunaKorkeus);
                 txtKarmiPA.Text = Convert.ToString(ikkunaLeveys * karmiLeveys * 2 + (ikkunaKorkeus-karmiLeveys*2) * karmiLeveys * 2);
             }
+            */
         }
 
-    private void btnClose_Click(object sender, RoutedEventArgs e)
-    {
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
             this.Close();
-    }
+        }
+
   }
 
   public class BusinessLogicWindow
