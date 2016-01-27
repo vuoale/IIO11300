@@ -5,12 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Harjoitus1MediaPlayer"
         mc:Ignorable="d"
-        Title="My Fine MediaPlayer" Height="358.81" Width="424.885">
+        Title="My Fine MediaPlayer" Height="390.832" Width="424.885">
     <Grid>
-        <Button x:Name="btnPlay" Content="Play" HorizontalAlignment="Left" Margin="32,20,0,0" VerticalAlignment="Top" Width="75" Click="btnPlay_Click"/>
-        <MediaElement x:Name="mediaElement" HorizontalAlignment="Left" Height="255" Margin="32,53,0,0" VerticalAlignment="Top" Width="340" LoadedBehavior="Manual"/>
-        <Button x:Name="btnPause" Content="Pause" HorizontalAlignment="Left" Margin="121,20,0,0" VerticalAlignment="Top" Width="75" Click="btnPause_Click"/>
-        <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" Margin="211,20,0,0" VerticalAlignment="Top" Width="75" Click="btnStop_Click"/>
+        <Button x:Name="btnPlay" Content="Play" HorizontalAlignment="Left" Margin="32,48,0,0" VerticalAlignment="Top" Width="75" Click="btnPlay_Click"/>
+        <MediaElement x:Name="mediaElement" HorizontalAlignment="Left" Height="255" Margin="32,87,0,0" VerticalAlignment="Top" Width="340" LoadedBehavior="Manual"/>
+        <Button x:Name="btnPause" Content="Pause" HorizontalAlignment="Left" Margin="121,48,0,0" VerticalAlignment="Top" Width="75" Click="btnPause_Click" IsEnabled="False"/>
+        <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" Margin="211,48,0,0" VerticalAlignment="Top" Width="75" Click="btnStop_Click" IsEnabled="False"/>
+        <TextBox x:Name="txtFileName" HorizontalAlignment="Left" Height="23" Margin="32,12,0,0" TextWrapping="Wrap" Text="d:\temp\Testi.mp3" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnBrowse" Content="Browse" HorizontalAlignment="Left" Margin="164,12,0,0" VerticalAlignment="Top" Width="75" Click="btnBrowse_Click"/>
 
     </Grid>
 </Window>
