@@ -81,5 +81,11 @@ namespace H3MittausData
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnSaveToXML_Click(object sender, RoutedEventArgs e)
+        {
+            //serialisoidaan XML:ksi
+            JAMK.IT.IIO11300.Serialisointi.SerialisoiXml(@"d:\testi.xml", mitatut);
+        }
     }
 }

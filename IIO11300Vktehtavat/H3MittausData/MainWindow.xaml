@@ -25,6 +25,7 @@
                             <TextBox x:Name="txtFileName" Text="d:\temp\testi.txt"/>
                             <Button x:Name="btnSaveToFile" Content="Save to file" Click="btnSaveToFile_Click"/>
                             <Button x:Name="btnGetFromFile" Content="Read from file" Click="btnGetFromFile_Click"/>
+                            <Button x:Name="btnSaveToXML" Content="Save to XML" Click="btnSaveToXML_Click"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="klo:"/>
