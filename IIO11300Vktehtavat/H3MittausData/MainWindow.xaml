@@ -5,24 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:H3MittausData"
         mc:Ignorable="d"
-        Title="Mittausdata IO" Height="350" Width="525" FontSize="18">
+        Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <TabControl x:Name="tabControl" 
-                    HorizontalAlignment="Stretch" 
-                    Margin="10,10,0,0" VerticalAlignment="Stretch" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="128*"/>
+            <RowDefinition Height="191*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="465*"/>
+        </Grid.ColumnDefinitions>
+        <TabControl x:Name="tabControl" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,10,10,10" VerticalAlignment="Stretch" Grid.RowSpan="2">
             <TabItem Header="Data Input">
-                <Grid Background="#FF93CD72">
+                <Grid Background="#FFE5E5E5">
                     <StackPanel Orientation="Vertical">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Tänään on:"/>
                             <TextBlock x:Name="txtToday"/>
                             <TextBlock Text="Tiedostonimi:" Margin="10,0,0,0"/>
                             <TextBox x:Name="txtFileName" Text="d:\temp\testi.txt"/>
+                            <Button x:Name="btnSaveToFile" Content="Save to file" Click="btnSaveToFile_Click"/>
+                            <Button x:Name="btnGetFromFile" Content="Read from file" Click="btnGetFromFile_Click"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="klo:" />
+                            <TextBlock Text="klo:"/>
                             <TextBox x:Name="txtClock" Width="60"/>
-                            <TextBlock Text="mittaustulos:" />
+                            <TextBlock Text="mittaustulos:"/>
                             <TextBox x:Name="txtData" Width="60"/>
                             <Button x:Name="btnSaveData" Content="New data" Margin="10,0,0,0" Click="btnSaveData_Click"/>
                         </StackPanel>
@@ -33,10 +40,14 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Reports">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+
+                </Grid>
             </TabItem>
             <TabItem Header="Settings">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+
+                </Grid>
             </TabItem>
         </TabControl>
 
