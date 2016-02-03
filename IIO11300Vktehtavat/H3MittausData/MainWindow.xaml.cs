@@ -51,5 +51,35 @@ namespace H3MittausData
             lbData.ItemsSource = null;
             lbData.ItemsSource = mitatut;
         }
+
+        private void btnSaveToFile_Click(object sender, RoutedEventArgs e)
+        {
+            // kutsu BL:n tallennusmetodia
+            try
+            {
+                MittausData.SaveDataToFile(mitatut, txtFileName.Text);
+                MessageBox.Show("Tiedot tallennettu onnistuneesti tiedostoon " + txtFileName.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnGetFromFile_Click(object sender, RoutedEventArgs e)
+        {
+            //luetaan datat käyttäjän antamasta tiedostosta
+            try
+            {
+                mitatut = null;
+                mitatut = MittausData.ReadDataFromFile(txtFileName.Text);
+                ApplyChanges();
+                MessageBox.Show("Tiedot luettu onnistuneesti tiedostosta " + txtFileName.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
