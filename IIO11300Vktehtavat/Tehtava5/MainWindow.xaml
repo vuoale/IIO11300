@@ -1,9 +1,9 @@
-﻿<Window x:Class="Tehtava4.MainWindow"
+﻿<Window x:Class="Tehtava5.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Tehtava4"
+        xmlns:local="clr-namespace:Tehtava5"
         mc:Ignorable="d"
         Title="SM-Liiga" Height="350" Width="667.157">
     <Grid>
@@ -19,7 +19,8 @@
         <Button x:Name="talletaPelaajaButton" Content="Talleta pelaaja" HorizontalAlignment="Left" Margin="233,68,0,0" VerticalAlignment="Top" Width="110" Click="talletaPelaajaButton_Click"/>
         <Button x:Name="poistaPelaajaButton" Content="Poista pelaaja" HorizontalAlignment="Left" Margin="233,106,0,0" VerticalAlignment="Top" Width="110" Click="poistaPelaajaButton_Click"/>
         <Button x:Name="kirjoitaPelaajatButton" Content="Kirjoita pelaajat" HorizontalAlignment="Left" Margin="233,143,0,0" VerticalAlignment="Top" Width="110" Click="kirjoitaPelaajatButton_Click"/>
-        <Button x:Name="lopetusButton" Content="Lopetus" HorizontalAlignment="Left" Margin="233,180,0,0" VerticalAlignment="Top" Width="110" Click="lopetusButton_Click"/>
+        <Button x:Name="haePelaajatButton" Content="Hae pelaajat" HorizontalAlignment="Left" Margin="233,180,0,0" VerticalAlignment="Top" Width="110" Click="haePelaajatButton_Click"/>
+        <Button x:Name="lopetusButton" Content="Lopetus" HorizontalAlignment="Left" Margin="233,215,0,0" VerticalAlignment="Top" Width="110" Click="lopetusButton_Click"/>
         <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="168" Margin="377,32,0,0" VerticalAlignment="Top" Width="256" SelectionChanged="listBox_SelectedIndexChanged"/>
         <StatusBar x:Name="statusBar" HorizontalAlignment="Left" Height="32" VerticalAlignment="Center" Width="659" Margin="0,287,0,0">
             <TextBlock Name="tbStatus" Text="" />

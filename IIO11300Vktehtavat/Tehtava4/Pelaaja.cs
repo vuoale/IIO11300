@@ -79,9 +79,9 @@ namespace Tehtava4
                     using (StreamWriter sw = File.CreateText(filu))
                     {
                         //käydään kokoelma läpi ja kirjoitetaan kukin pelaaja omalle riville
-                        foreach (var item in dataa)
+                        foreach (var pelaaja in dataa)
                         {
-                            sw.WriteLine(item.Etunimi + ";" + item.Sukunimi + ";" + item.Siirtohinta + ";" + item.Seura);
+                            sw.WriteLine(pelaaja.Etunimi + ";" + pelaaja.Sukunimi + ";" + pelaaja.Siirtohinta + ";" + pelaaja.Seura);
                         }
                     }
                 }
@@ -90,9 +90,9 @@ namespace Tehtava4
                     //lisätään olemassaolevaan tiedostoon
                     using (StreamWriter sw = File.AppendText(filu))
                     {
-                        foreach (var item in dataa)
+                        foreach (var pelaaja in dataa)
                         {
-                            sw.WriteLine(item.Etunimi + ";" + item.Sukunimi + ";" + item.Siirtohinta + ";" + item.Seura);
+                            sw.WriteLine(pelaaja.Etunimi + ";" + pelaaja.Sukunimi + ";" + pelaaja.Siirtohinta + ";" + pelaaja.Seura);
                         }
                     }
                 }

@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Tehtava4
+namespace Tehtava5
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -200,12 +200,46 @@ namespace Tehtava4
             //kutsu tallennusmetodia
             try
             {
-                Pelaaja.SaveDataToFile(pelaajat, @"D:\Pelaajat.txt");
-                tbStatus.Text = @"Tiedot kirjoitettu onnistuneesti tiedostoon D:\Pelaajat.txt";
+                if (Pelaaja.SaveDataToFile(pelaajat))
+                {
+                    tbStatus.Text = "Kirjoitus onnistui";
+                }
+                else
+                {
+                    tbStatus.Text = "Kirjoitus peruutettu";
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                tbStatus.Text = ex.Message;
+            }
+        }
+
+        private void haePelaajatButton_Click(object sender, RoutedEventArgs e)
+        {
+            //kutsu lukumetodia
+            try
+            {
+                pelaajat = Pelaaja.ReadDataFromFile();
+                if (pelaajat != null)
+                {
+                    //kirjoitetaan kaikkien Pelaaja-olioiden EsitysNimi listBoxiin
+                    List<string> items = new List<string>();
+                    foreach (Pelaaja pelaaja in pelaajat)
+                    {
+                        items.Add(pelaaja.EsitysNimi);
+                    }
+                    listBox.ItemsSource = items;
+                    tbStatus.Text = "Luku onnistui";
+                }
+                else
+                {
+                    tbStatus.Text = "Luku peruutettu";
+                }
+            }
+            catch (Exception ex)
+            {
+                tbStatus.Text = ex.Message;
             }
         }
     }
