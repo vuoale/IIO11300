@@ -1,0 +1,21 @@
+﻿<Window x:Class="Tehtava7.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tehtava7"
+        mc:Ignorable="d"
+        Title="Salasanan vahvuuden tarkistaja" Height="248.04" Width="525" FontSize="16">
+    <Grid>
+        <StackPanel>
+            <TextBlock>Tarkistettava salasana:</TextBlock>
+            <TextBox x:Name="txtPassword" TextChanged="txtPassword_TextChanged"/>
+            <TextBlock x:Name="tbLength">...</TextBlock>
+            <TextBlock x:Name="tbUppercase">...</TextBlock>
+            <TextBlock x:Name="tbLowercase">...</TextBlock>
+            <TextBlock x:Name="tbNumbers">...</TextBlock>
+            <TextBlock x:Name="tbSpecial">...</TextBlock>
+            <TextBlock x:Name="tbPassword_Strength" FontSize="42" Background="LightGray" Height="69">Anna salasana</TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>
