@@ -1,0 +1,27 @@
+﻿<Window x:Class="Tehtava8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tehtava8"
+        mc:Ignorable="d"
+        Title="ViiniAsiakkaat" Height="350" Width="340">
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Vertical">
+                <Button x:Name="btnHaeAsiakkaat" Margin="5" Content="Hae asiakkaat" Click="btnHaeAsiakkaat_Click" />
+                <ListBox x:Name="listBox" Height="280" Width="150" ItemsSource="{Binding}" DisplayMemberPath="lastname" />
+            </StackPanel>
+            <StackPanel Width="150" Margin="10">
+                <TextBlock Text="Etunimi" />
+                <TextBox x:Name="txtEnimi" Text="{Binding ElementName=listBox, Path=SelectedItem.firstname}" Background="#FFC5FFDF" />
+                <TextBlock Text="Sukunimi" />
+                <TextBox x:Name="txtSnimi" Text="{Binding ElementName=listBox, Path=SelectedItem.lastname}" Background="#FFC5FFDF" />
+                <TextBlock Text="Osoite" />
+                <TextBox x:Name="txtOsoite" Text="{Binding ElementName=listBox, Path=SelectedItem.address}" Background="#FFC5FFDF" />
+                <TextBlock Text="Kaupunki" />
+                <TextBox x:Name="txtKaupunki" Text="{Binding ElementName=listBox, Path=SelectedItem.city}" Background="#FFC5FFDF" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
