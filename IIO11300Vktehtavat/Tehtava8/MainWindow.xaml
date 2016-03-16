@@ -5,12 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tehtava8"
         mc:Ignorable="d"
-        Title="ViiniAsiakkaat" Height="350" Width="340">
+        Title="ViiniAsiakkaat" Height="360" Width="340">
     <Grid>
         <StackPanel Orientation="Horizontal">
             <StackPanel Orientation="Vertical">
                 <Button x:Name="btnHaeAsiakkaat" Margin="5" Content="Hae asiakkaat" Click="btnHaeAsiakkaat_Click" />
-                <ListBox x:Name="listBox" Height="280" Width="150" ItemsSource="{Binding}" DisplayMemberPath="lastname" />
+                <ComboBox x:Name="cbKaupungit" Margin="5" ItemsSource="{Binding}" SelectionChanged="cbKaupungit_SelectionChanged" />
+                <ListBox x:Name="listBox" Height="260" Width="150" ItemsSource="{Binding}" DisplayMemberPath="lastname" />
             </StackPanel>
             <StackPanel Width="150" Margin="10">
                 <TextBlock Text="Etunimi" />

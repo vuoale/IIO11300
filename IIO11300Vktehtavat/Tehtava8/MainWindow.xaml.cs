@@ -22,11 +22,42 @@ namespace Tehtava8
     /// </summary>
     public partial class MainWindow : Window
     {
+        DataTable dt;
+        DataView dv;
+        List<string> kaupungit;
+
         public MainWindow()
         {
             InitializeComponent();
             GetData();
+            //IniMyStuff();
         }
+
+        private void IniMyStuff()
+        {
+            //asetetaan kaupunkien nimet ComboBoxiin
+            kaupungit = new List<string>();
+            //VE1 kaupunkien nimet kovakoodattu
+            //kaupungit.Add("Jyväskylä");
+            //kaupungit.Add("Helsinki");
+            //kaupungit.Add("New York");
+            //VE2 käydään loopittamalla DataTable läpi
+            string kaupunki = "";
+            foreach (DataRow item in dt.Rows)
+            {
+                kaupunki = item[3].ToString();
+                //lisätään kukin kaupunki vain kerran listaan
+                if (!kaupungit.Contains(kaupunki))
+                    kaupungit.Add(kaupunki);     
+            }
+            //VE3 LINQ:lla voi tehdä kyselyn tyypitettyyn DataTableen, huom ei kaikille DataTableille
+            //joten ei toimi tässä
+            //var result = (from c in dt
+            //              select c.City).Distinct();
+            //databindaus
+            cbKaupungit.ItemsSource = kaupungit;
+        }
+
         private void GetData()
         {
             try
@@ -38,11 +69,13 @@ namespace Tehtava8
                     //dataadapter
                     string sql = "SELECT firstname, lastname, address, city FROM vCustomers";
                     SqlDataAdapter da = new SqlDataAdapter(sql, conn);
-                    DataTable dt = new DataTable("Lasnaolot");
+                    dt = new DataTable("dt");
                     da.Fill(dt);
+                    dv = dt.DefaultView;
                     //sidotaan datatable UI-kontrolliin
                     listBox.DataContext = dt;
                     conn.Close();
+                    IniMyStuff();
                 }
             }
             catch (Exception ex)
@@ -54,6 +87,12 @@ namespace Tehtava8
         private void btnHaeAsiakkaat_Click(object sender, RoutedEventArgs e)
         {
             GetData();
+        }
+
+        private void cbKaupungit_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //asetetaan DataView:llä filtteri
+            dv.RowFilter = string.Format("City LIKE '{0}'", cbKaupungit.SelectedValue);
         }
     }
 }
