@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H7ADOConsoleDemo", "H7ADOCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehtava8", "Tehtava8\Tehtava8.csproj", "{179B8280-819C-42D5-9E8F-4E53E1916263}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehtava9", "Tehtava9\Tehtava9.csproj", "{931C7CA2-21CB-4FD9-8F6E-33366B866D06}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{179B8280-819C-42D5-9E8F-4E53E1916263}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{179B8280-819C-42D5-9E8F-4E53E1916263}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{179B8280-819C-42D5-9E8F-4E53E1916263}.Release|Any CPU.Build.0 = Release|Any CPU
+		{931C7CA2-21CB-4FD9-8F6E-33366B866D06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{931C7CA2-21CB-4FD9-8F6E-33366B866D06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{931C7CA2-21CB-4FD9-8F6E-33366B866D06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{931C7CA2-21CB-4FD9-8F6E-33366B866D06}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,33 @@
+﻿<Window x:Class="Tehtava9.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tehtava9"
+        mc:Ignorable="d"
+        Title="Viinikellarin Asiakkaat" Height="360" Width="640">
+    <Grid>
+        <StackPanel>
+            <Button x:Name="btnHae" Content="Hae asiakkaat" Click="btnHae_Click"/>
+            <Button x:Name="btnUusi" Content="Tee uusi" Click="btnUusi_Click"/>
+            <StackPanel x:Name="stackPanel" Orientation="Horizontal" Visibility="Collapsed">
+                <TextBlock Text="etunimi" Margin="0,0,10,0"/>
+                <TextBox x:Name="txtEnimi" Text="" Width="50" Margin="0,0,10,0"/>
+                <TextBlock Text="sukunimi" Margin="0,0,10,0"/>
+                <TextBox x:Name="txtSnimi" Text="" Width="50" Margin="0,0,10,0"/>
+                <TextBlock Text="osoite" Margin="0,0,10,0"/>
+                <TextBox x:Name="txtOsoite" Text="" Width="50" Margin="0,0,10,0"/>
+                <TextBlock Text="postinro" Margin="0,0,10,0"/>
+                <TextBox x:Name="txtPostinro" Text="" Width="50" Margin="0,0,10,0"/>
+                <TextBlock Text="kaupunki" Margin="0,0,10,0"/>
+                <TextBox x:Name="txtKaupunki" Text="" Width="50" Margin="0,0,10,0"/>
+                <Button x:Name="btnLuo" Content="Luo uusi" Click="btnLuo_Click"/>
+            </StackPanel>
+            <Button x:Name="btnPoista" Content="Poista valittu" Click="btnPoista_Click"/>
+            <Button x:Name="btnTallenna" Content="Tallenna muutokset"/>
+            <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto">
+                <DataGrid x:Name="dataGrid" ItemsSource="{Binding}" SelectionMode="Single" Height="240"/>
+            </ScrollViewer>
+        </StackPanel>
+    </Grid>
+</Window>
