@@ -1,0 +1,29 @@
+﻿<Window x:Class="H8BookShopORM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:H8BookShopORM"
+        mc:Ignorable="d"
+        Title="BookShop" Height="350" Width="600">
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Name="spBook" Width="200" Margin="5">
+                <Button x:Name="btnHaeTesti" Margin="0,5,0,0" Content="Hae testikirjat" Click="btnHaeTesti_Click" />
+                <Button x:Name="btnHae" Margin="0,5,0,0" Content="Hae kirjat SQL Server" Click="btnHae_Click" />
+                <TextBlock Text="Tuote" />
+                <TextBox x:Name="txtTuote" Background="#FFC5FFDF" Text="{Binding Mode=OneWay}"/>
+                <TextBlock Text="Nimi" />
+                <TextBox x:Name="txtNimi" Background="#FFC5FFDF" Text="{Binding Path=Name}"/>
+                <TextBlock Text="Kirjailija" />
+                <TextBox x:Name="txtKirjailija" Background="#FFC5FFDF" Text="{Binding Path=Author}" />
+                <TextBlock Text="Maa" />
+                <TextBox x:Name="txtMaa" Background="#FFC5FFDF" Text="{Binding Path=Country}"/>
+                <TextBlock Text="Vuosi" />
+                <TextBox x:Name="txtVuosi" Background="#FFC5FFDF"  Text="{Binding Path=Year}"/>
+                <Button x:Name="btnTallenna" Margin="0,5,0,0" Content="Tallenna" Click="btnTallenna_Click" />
+            </StackPanel>
+            <DataGrid x:Name="dgBooks" AutoGenerateColumns="True" ItemsSource="{Binding}" SelectionChanged="dgBooks_SelectionChanged" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>
