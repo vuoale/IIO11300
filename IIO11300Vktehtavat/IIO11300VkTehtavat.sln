@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H8BookShopORM", "H8BookShop
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehtava10", "Tehtava10\Tehtava10.csproj", "{9B3165A4-A57D-47DF-94A9-3A1C7C8DACEF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H10BookShopEF", "H10BookShopEF\H10BookShopEF.csproj", "{8E570452-EC3F-467E-8ABA-94554C7EC335}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{9B3165A4-A57D-47DF-94A9-3A1C7C8DACEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B3165A4-A57D-47DF-94A9-3A1C7C8DACEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B3165A4-A57D-47DF-94A9-3A1C7C8DACEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E570452-EC3F-467E-8ABA-94554C7EC335}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E570452-EC3F-467E-8ABA-94554C7EC335}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E570452-EC3F-467E-8ABA-94554C7EC335}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E570452-EC3F-467E-8ABA-94554C7EC335}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
